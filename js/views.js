@@ -368,7 +368,7 @@ function vSettings(ui) {
   h += vSync();
   h += '<section class="panel stack"><h2 class="sec">Dati e backup</h2><p class="hint">' + (SY.account ? 'I dati sono sul telefono e su OneDrive. Un backup a mano ogni tanto resta comunque una buona idea.' : 'Senza sincronizzazione i dati sono solo su questo telefono: se disinstalli l\'app o cancelli i dati di Chrome li perdi. Esporta un backup ogni tanto.') + (meta.lastBackup ? ' Ultimo backup: ' + dLbl(meta.lastBackup) + '.' : '') + '</p>'
     + '<div class="row">' + btn('backup', 'Esporta backup') + btn('csv', 'CSV allenamenti') + btn('csv-body', 'CSV corpo e cardio') + '</div><div class="row">' + btn('import', 'Importa backup o CSV', 'ghost') + '</div>'
-    + '<p class="hint">Puoi importare anche i dati delle versioni precedenti dell'app (backup o CSV, anche dalla versione web Doppia Progressione).</p></section>';
+    + '<p class="hint">Puoi importare anche i dati delle versioni precedenti dell\'app (backup o CSV, anche dalla versione web Doppia Progressione).</p></section>';
   h += '<section class="panel stack"><h2 class="sec">Informazioni</h2><p class="hint">Progressio 3.0. I tuoi dati restano sul tuo telefono' + (syncConfigured() ? ' e, se colleghi l\'account, in una cartella privata della tua OneDrive' : '') + '. ' + (CFG.goatcounter ? 'L\'app conta le aperture in forma anonima (senza cookie né dati personali) per sapere quante persone la usano.' : 'L\'app non raccoglie statistiche.') + '</p></section>';
   return h;
 }
